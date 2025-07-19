@@ -22,7 +22,7 @@ Une application web intuitive pour calculer vos moyennes par UE (Unité d'Enseig
 
 1. **Cloner le repository**
    ```bash
-   git clone https://github.com/votre-username/calculateur-moyennes-universitaires.git
+   git clone https://github.com/Acelyamhrr/calcul-notes.git
    cd calculateur-moyennes-universitaires
    ```
 
