@@ -1,8 +1,8 @@
-# Calculateur de Moyennes Universitaires 🎓
+# Calculateur de Moyennes Universitaires
 
-Une application web intuitive pour calculer vos moyennes par UE (Unité d'Enseignement) et votre moyenne générale de semestre.
+Une application web pour calculer vos moyennes par UE (Unité d'Enseignement) et votre moyenne générale de semestre.
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - **Calcul automatique** : Moyennes par UE et moyenne générale du semestre
 - **Gestion multi-semestres** : Basculez facilement entre différents semestres
@@ -12,7 +12,7 @@ Une application web intuitive pour calculer vos moyennes par UE (Unité d'Enseig
 - **Interface moderne** : Deux thèmes au choix
 - **Responsive** : Compatible mobile et desktop
 
-## 🚀 Installation
+## Installation
 
 ### Prérequis
 - Un navigateur web
@@ -46,7 +46,7 @@ Une application web intuitive pour calculer vos moyennes par UE (Unité d'Enseig
 3. **Accéder à l'application**
    Rendez-vous sur `http://localhost:8000` (ou ouvrez directement le fichier HTML)
 
-## 🎨 Personnalisation
+## Personnalisation
 
 ### Thèmes
 - **Élégant** : Design sobre
@@ -58,7 +58,7 @@ Une application web intuitive pour calculer vos moyennes par UE (Unité d'Enseig
 3. Ajustez les coefficients selon vos besoins
 4. Sauvegardez vos modifications
 
-## 📊 Utilisation
+## Utilisation
 
 1. **Sélectionner un semestre** : Cliquez sur les boutons de semestre en haut
 2. **Saisir les notes** : Entrez vos notes dans les champs correspondants (0-20)
@@ -69,7 +69,7 @@ Une application web intuitive pour calculer vos moyennes par UE (Unité d'Enseig
 - **Moyenne UE** : Moyenne pondérée des matières de l'UE
 - **Moyenne générale** : Moyenne arithmétique des moyennes d'UE
 
-## 🔒 Gestion des données
+## Gestion des données
 
 L'application utilise le localStorage du navigateur pour sauvegarder :
 - Les notes saisies
@@ -78,7 +78,7 @@ L'application utilise le localStorage du navigateur pour sauvegarder :
 
 **Note** : Les données sont stockées localement et ne sont pas partagées.
 
-## 📝 TODO
+## TODO
 
 - [ ] Ajout de graphiques statistiques
 - [ ] Export en formats Excel/CSV
@@ -88,7 +88,7 @@ L'application utilise le localStorage du navigateur pour sauvegarder :
 - [ ] Système de backup/restore
 
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
