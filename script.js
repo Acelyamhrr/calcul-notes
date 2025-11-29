@@ -198,18 +198,17 @@ function updateGrade(subjectCode, value) {
     updateOverallAverage();
 }
 
-// Calcul de la note d'une UE
-function calculateUEGrade(ue) {
-    const currentGrades = grades[currentSemester] || {};
-    const validGrades = ue.subjects.filter(subject => currentGrades[subject.code] !== undefined);
-    
-    if (validGrades.length === 0) return null;
-
-    const totalWeightedScore = validGrades.reduce((sum, subject) => {
-        return sum + (currentGrades[subject.code] * subject.coefficient);
-    }, 0);
-
-    return totalWeightedScore / ue.totalCoeff;
+// Calcul d'une UE 
+function calculateUEGrade(ue) { 
+    const g = grades[currentSemester] || {}; 
+    let total = 0, coeffSum = 0; 
+    ue.subjects.forEach(s => { 
+        if (g[s.code] !== undefined) { 
+            total += g[s.code] * s.coefficient; 
+            coeffSum += s.coefficient; 
+        } 
+    }); 
+    return coeffSum ? total / coeffSum : null; 
 }
 
 // Obtenir la classe CSS pour une note
@@ -276,13 +275,22 @@ function renderUECards() {
     });
 }
 
-// Calcul de la moyenne générale
+// Calcul de la moyenne du semestre (pondérée sur toutes les matières)
 function calculateSemesterAverage() {
+    const g = grades[currentSemester] || {};
     const semester = getCurrentSemester();
-    const ueGrades = semester.ues.map(ue => calculateUEGrade(ue)).filter(grade => grade !== null);
-    
-    if (ueGrades.length === 0) return null;
-    return ueGrades.reduce((sum, grade) => sum + grade, 0) / ueGrades.length;
+
+    let total = 0, coeffSum = 0;
+    semester.ues.forEach(ue => {
+        ue.subjects.forEach(s => {
+            if (g[s.code] !== undefined) {
+                total += g[s.code] * s.coefficient;
+                coeffSum += s.coefficient;
+            }
+        });
+    });
+
+    return coeffSum ? total / coeffSum : null;
 }
 
 // Mise à jour de la moyenne générale
