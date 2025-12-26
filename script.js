@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateOverallAverage();
 });
 
-// ==================== GESTION DES DONNÉES ====================
-
 // Chargement des données depuis localStorage
 function loadData() {
     const savedGrades = localStorage.getItem('university-grades');      // récupère les notes sauvegardés
@@ -52,7 +50,6 @@ function saveTheme() {
     localStorage.setItem('app-theme', currentTheme);
 }
 
-// ==================== GESTIONNAIRES D'ÉVÉNEMENTS ====================
 
 // Initialisation des event listeners
 function initializeEventListeners() {
